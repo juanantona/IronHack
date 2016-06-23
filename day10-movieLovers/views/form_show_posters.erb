@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <h1>MOVIE LOVERS By JUAN ANTONA</h1>
+     <style>
+      .centered {
+         width: 100%;
+         margin-top: 400px;
+         text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>FOTOGALLERY By JUAN ANTONA</h1>
+    <div>
+      <form action="/upload_image" method="POST" enctype="multipart/form-data">
+        <p> 
+          <label for="Image">FILE:</label>
+          <input type="file" name="file_name">
+        </p>
+        <p>
+          <label for="Image">COMMAND:</label> 
+          <input name="commit" type="submit" value="Upload" />
+        </p>
+      <form>
+    </div>
+    <h2>THUMBNAILS</h2>
+    <div>
+      <%= @thumbnails_gallery %>
+    </div>
+  </body>
+</html>
+
+
+
+

@@ -1,0 +1,18 @@
+<%= form_for @url do |f| %>
+
+<ul>
+
+  <li>
+	  <%= f.label :short_url %>
+	  <%= f.text_field :short_url %>
+  </li>
+  <li>
+  	<%= f.label :long_url %>
+	<%= f.text_field :long_url %>
+  </li>
+	<%= f.submit "Create new url" %>
+  </li>
+
+</ul>
+
+<% end %>

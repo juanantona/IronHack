@@ -1,0 +1,32 @@
+#title {
+	font-family: Josefin-Sans;
+	font-size: 82px;
+	font-style: italic;
+}
+section {
+	margin-left: 40px;
+	width:440px;
+	height: 600px;
+    padding:10px;
+    background-color: rgba(215, 213, 226, 0.8);
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px 5px #888888;
+}
+aside {
+	margin-left: 40px;
+	width:440px;
+	height: 600px;
+    padding:10px;
+    background-color: rgba(215, 213, 226, 0.8);
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px 5px #888888;
+}
+header, footer {
+	width: 100%;
+	height: 100px;
+	text-align: center;
+	margin-left: 20px;
+	color: #661111;
+	border-radius: 10px;
+	background-color: #FFF3C9;
+}

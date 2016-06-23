@@ -1,0 +1,50 @@
+<div class="panel panel-primary">
+  
+  <div class="panel-heading">
+    <h3 class="panel-title"><%= @concert.band %></h3>
+  </div>
+
+  <div class="panel-body">
+    <div class="row">
+    <div class="col-lg-3">
+      <style class="img">
+        .img{
+         margin: 20px;
+         text-align: center;  
+        }
+      </style>
+      <div class="img">
+      <img src="http://images.tshirtsubway.com/logo_Large_44689.jpg">
+      </div>
+      <a href="#" class="btn btn-default btn-lg btn-block">Add comment</a>
+    </div>
+    
+    <div class="col-lg-9">
+    
+        <h4>DATE: <%= @concert.date %></h4>
+        <h4>VENUE: <%= @concert.venue %></h4>
+        <h4>CITY: <%= @concert.city %></h4>
+        <h4>PRICE: <%= @concert.price %>,00€</h4>
+        <% if @concert.description != nil && @concert.description != "" %>
+          <h4>DESCRIPTION:<%= @concert.description %></h4>
+        <% end %>  
+    
+
+        <ul class="list-group">
+          <li class="list-group-item active">
+            <span class="badge"><%= @comments.length %></span>
+            COMMENTS
+          </li>
+            <% if @comments.length > 0 %>
+              <% @comments.each do |comment| %>
+              <li class="list-group-item">
+                <strong><%= comment.author %></strong>
+                <p><%= comment.comment %></p>
+              <% end %>  
+            <% end %> 
+          </li>    
+        </ul>
+    </div>
+   </div>
+  </div>
+</div>

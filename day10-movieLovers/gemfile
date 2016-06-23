@@ -1,0 +1,12 @@
+source 'https://rubygems.org'
+
+gem 'pry'
+
+gem 'sinatra'
+
+gem 'sinatra-contrib'
+
+gem 'mini_magick'
+
+gem 'imdb'
+

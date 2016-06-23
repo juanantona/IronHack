@@ -1,0 +1,21 @@
+<table class="table table-striped table-hover ">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>BAND</th>
+      <th>CITY</th>
+      <th>DATE</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @concerts.each do |concert| %>
+    <tr>
+      <td><%= concert.id %></td>
+      <td><%= concert.band %></td>
+      <td><%= concert.city %></td>
+      <td><%= concert.date.to_s %></td>
+    </tr>
+   <% end %>  
+   </tbody>
+</table> 
+

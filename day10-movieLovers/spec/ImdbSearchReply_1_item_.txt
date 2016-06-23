@@ -1,0 +1,1 @@
+[#<Imdb::Movie:0x1ea0b78 @id="0099653", @url="http://akas.imdb.com/title/tt0099653/combined", @title="Ghost (M\u00E1s all\u00E1 del amor) (1990)">]

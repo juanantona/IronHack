@@ -1,0 +1,63 @@
+<% if @concert.errors.any? %>
+  <div class="alert alert-dismissible alert-danger">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+      <% @concert.errors.full_messages.each do |error_msg| %>
+        <strong>Error!</strong> <%= error_msg %> <br>
+      <% end %>
+  </div>
+<% end %>
+
+<%= form_for @concert do |f| %>
+
+<form class="form-horizontal">
+  <fieldset>
+    <legend>New concert</legend>
+    
+    <div class="form-group">
+      <label class="col-lg-12 control-label">Band</label>
+      <div class="col-lg-6">
+        <%= f.text_field :band, class:"form-control",  placeholder:"Band" %>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-lg-12 control-label">Venue</label>
+      <div class="col-lg-6">
+        <%= f.text_field :venue, class:"form-control",  placeholder:"Venue" %>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-lg-12 control-label">City</label>
+      <div class="col-lg-6">
+        <%= f.text_field :city, class:"form-control",  placeholder:"City" %>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-lg-12 control-label">Date</label>
+      <div class="col-lg-6">
+        <%= f.date_field :date, class:"form-control", placeholder:"Date" %>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-lg-12 control-label">Price</label>
+      <div class="col-lg-6">
+        <%= f.text_field :price, class:"form-control", placeholder:"Price" %>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-lg-12 control-label">Description</label>
+      <div class="col-lg-6">
+        <%= f.text_area :description, rows: 3, columns: 40, class:"form-control", placeholder:"Description" %>
+        <span class="help-block">Please, type a short descriptiont about event.</span>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-lg-12 col-lg-offset-0">
+        <!-- <%= f.submit "Cancel", class:"btn btn-default" %> -->
+        <%= f.submit "Create", class:"btn btn-primary" %>
+        
+      </div>
+       
+  </fieldset>
+</form>
+
+<% end %>
